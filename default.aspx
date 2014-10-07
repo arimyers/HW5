@@ -5,15 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
+    <link href="HW5SS.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="mainBody">
     <form id="form1" runat="server">
     <div>
-    <div><h1>Mike's Massively Awesome Mortgage Calculator</h1></div>
-    <hr />
+    <div id="title"><h1>Mike's Massively Awesome Mortgage Calculator</h1>
+        </div>
+        <hr style="color: #FFFFFF" />
         
-        <br /><br />
+        <br />
      
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      
@@ -46,6 +47,8 @@
         <asp:Button ID="btnClear" runat="server" Text="Clear" />
         
         <br />
+        
+        <br />
         <asp:Label ID="Label4" runat="server" ForeColor="#CC0000" Text="*"></asp:Label>
         <asp:Label ID="Label5" runat="server" Text="- Required Fields"></asp:Label>
         
@@ -54,11 +57,16 @@
         Welcome to my mortage calculator. Please complete the fields above to have your monthly playment and loan repayment schedule calulated for you.
         
         <% Else %>        
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        Monthly Payment: &nbsp; <h2><asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></h2>
         
         <br /><br />
         
-        <asp:GridView ID="loanGridView" runat="server" />
+        <asp:GridView ID="loanGridView" runat="server" BackColor="White" BorderStyle="Solid" >
+            <AlternatingRowStyle BackColor="#99CCFF" />
+            <EditRowStyle BackColor="White" />
+            <HeaderStyle ForeColor="#000066" />
+            <RowStyle Height="10px" HorizontalAlign="Center" VerticalAlign="Middle" />
+        </asp:GridView>
         <% End If%>    
         </div>
     </form>
