@@ -84,5 +84,7 @@ Partial Class _Default
         tbLoanAmt.Text = String.Empty
         tbAnnualInterest.Text = String.Empty
         tbLoanTerm.Text = String.Empty
+        lblMonthlyPmt.Text = String.Empty
+        loanGridView.Visible = False
     End Sub
 End Class
